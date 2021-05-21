@@ -10,7 +10,10 @@ if [ "$FILES" = "" ];then
 
 fi
 
-
+#Permisos 
+chown -R proxy.proxy /etc/squid
+chown -R proxy.proxy /var/log/squid
+chown -R proxy.proxy /var/spool/squid
 
 
 
