@@ -1,3 +1,20 @@
 #!/bin/bash
 
 
+FILES=$(ls -A /etc/squid)
+
+
+if [ "$FILES" = "" ];then
+
+	cp -rf /opt/squid/* /etc/squid/
+
+fi
+
+
+
+
+
+
+exec /usr/sbin/squid -N -d 11
+
+
